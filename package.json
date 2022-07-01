@@ -6,8 +6,7 @@
   "type": "module",
   "author": {
     "name": "Sergey Kolmiller",
-    "email": "uyem.ru@gmail.com",
-    "url": "https://portfolio.uyem.ru/en"
+    "email": "uyem.ru@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,7 @@
     "start": "react-scripts start",
     "deploy": "npm run build && react-scripts build",
     "lint": "eslint -c .eslintrc src/package && stylelint --config .stylelintrc src/package",
-    "build": "npm run lint && node -e \"fs.rmSync('src/dist', { recursive: true, force: true })\" && microbundle --format es",
+    "build:client": "npm run lint && node -e \"fs.rmSync('src/dist', { recursive: true, force: true })\" && microbundle --format es",
     "dev": "concurrently \"microbundle --format es watch\" \"npm run start\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
